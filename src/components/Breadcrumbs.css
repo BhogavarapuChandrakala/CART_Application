@@ -1,0 +1,22 @@
+.breadcrumbs-wrapper {
+  margin-top: 16px; 
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+  
+}
+
+.breadcrumb-link {
+  color: #616161;
+  text-decoration: none; 
+  transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+  color: #68156d;
+}

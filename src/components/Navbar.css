@@ -1,0 +1,152 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: #fff;
+    box-sizing: border-box;
+    gap: 12px;
+    flex-wrap: wrap; 
+}
+
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #616161;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover { 
+    color: #5a065f;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap; 
+}
+
+
+.searchbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f3f4f7;
+    border-radius: 999px;
+    padding: 10px 44px 10px 18px;
+    width: 200px;
+    max-width: 32vw;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+    transition: width 0.3s ease;
+}
+
+.searchbar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    color: #616161;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.searchbar input::placeholder { color: #616161; }
+
+.searchbar .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.nav-actions { 
+     display: flex; 
+     align-items: center;
+     gap: 8px; 
+    }
+.nav-actions .MuiIconButton-root:hover { 
+    color: #68156d;
+ }
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 101; 
+}
+
+
+@media (min-width: 1030px) {
+    .logo { width: 72px; height: 72px; }
+    .nav-links a { font-size: 19px; margin: 0 18px; }
+}
+
+
+@media (max-width: 768px) {
+    body, html { 
+        overflow-x: hidden;
+    } 
+
+    .hamburger { 
+        display: block; 
+        position: absolute; 
+        top: 18px; right: 20px; 
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 60px;
+        text-align: center;
+        background: #fff;
+        padding: 10px 0;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        z-index: 100;
+    }
+
+    .nav-links.open { display: flex; }
+
+    .nav-right {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    
+    .searchbar { 
+        width: 120px; 
+        padding: 6px 12px; 
+    }
+    .searchbar input { 
+        font-size: 14px; 
+    }
+}
